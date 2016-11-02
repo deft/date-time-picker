@@ -1,0 +1,10 @@
+<div class="deft-date-time-picker">
+    <div class="deft-date-time-picker-date">
+        <label ng-show="config.dateLabel">{{ config.dateLabel }}</label>
+        <date-picker date="dateTime" config="config"></date-picker>
+    </div>
+    <div class="deft-date-time-picker-time" ng-show="config.useTimePicker !== false">
+        <label ng-show="config.timeLabel">{{ config.timeLabel }}</label>
+        <time-picker time="dateTime" config="config"></time-picker>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Date Time Picker</title>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/moment/min/moment-with-locales.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="../bower_components/angular-moment/angular-moment.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="../dist/date-time-picker-templates.min.js"></script>
+    <script>
+        angular.module('deft', ['deft.date_time_picker'])
+            .controller('TestCaseCtrl', function($scope) {
+                $scope.test = {
+                    date1: moment(),
+                    date2: moment(),
+                    config2: {
+                        dateLabel: "",
+                        timeLabel: false
+                    }
+                };
+            })
+        ;
+    </script>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../dist/style.css">
+    <style>
+        .test-case {
+            width: 250px;
+            background: #f1f1f1;
+            margin: 50px;
+            padding: 20px;
+            position: relative;
+        }
+    </style>
+</head>
+<body data-ng-app="deft" data-ng-controller="TestCaseCtrl">
+    <div class="test-case">
+        <date-time-picker data-ng-model="test.date1"></date-time-picker>
+    </div>
+    <div class="test-case">
+        <date-time-picker data-ng-model="test.date2" config="test.config2"></date-time-picker>
+    </div>
+</body>
+</html>

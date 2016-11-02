@@ -1,0 +1,35 @@
+{
+  "name": "date-time-picker",
+  "version": "1.0.0",
+  "description": "An angularjs date time picker",
+  "main": "js/date-time-picker.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "codecov.io": "~0.1.6",
+    "gulp": "~3.9.1",
+    "gulp-angular-templatecache": "~2.0.0",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "~2.6.0",
+    "gulp-less": "^3.1.0",
+    "gulp-ng-annotate": "~2.0.0",
+    "gulp-uglify": "~2.0.0",
+    "gulp-watch": "~4.3.10",
+    "istanbul": "~0.4.1",
+    "merge-stream": "~1.0.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/istanbul cover tests/test.js  && cat coverage/coverage.json | node_modules/.bin/codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/deft/date-time-picker.git"
+  },
+  "author": "Pieter Verloop <pieter@deft.software>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deft/date-time-picker/issues"
+  }
+}

@@ -1,0 +1,40 @@
+<div>
+    <div class="tableWrapper">
+        <table>
+            <tr class="adjust-row">
+                <td class="large"></td>
+                <td ng-click="adjustDate(10, 'day')"><i class="fa fa-angle-double-up"></i></td>
+                <td ng-click="adjustDate(10, 'month')"><i class="fa fa-angle-double-up"></i></td>
+                <td ng-click="adjustDate(10, 'year')"><i class="fa fa-angle-double-up"></i></td>
+            </tr>
+            <tr class="adjust-row">
+                <td class="large"></td>
+                <td ng-click="adjustDate(1, 'day')"><i class="fa fa-angle-up"></i></td>
+                <td ng-click="adjustDate(1, 'month')"><i class="fa fa-angle-up"></i></td>
+                <td ng-click="adjustDate(1, 'year')"><i class="fa fa-angle-up"></i></td>
+            </tr>
+            <tr class="date-time-row">
+                <td class="large align-left">{{ dateTime | amDateFormat: "dddd" }}</td>
+                <td class="date-time-text">{{ dateTime | amDateFormat:"DD" }}</td>
+                <td class="date-time-text">{{ dateTime | amDateFormat:"MMM" }}</td>
+                <td class="date-time-text">{{ dateTime | amDateFormat:"YYYY" }}</td>
+            </tr>
+            <tr class="adjust-row">
+                <td class="large"></td>
+                <td ng-click="adjustDate(-1, 'day')"><i class="fa fa-angle-down"></i></td>
+                <td ng-click="adjustDate(-1, 'month')"><i class="fa fa-angle-down"></i></td>
+                <td ng-click="adjustDate(-1, 'year')"><i class="fa fa-angle-down"></i></td>
+            </tr>
+            <tr class="adjust-row">
+                <td class="large"></td>
+                <td ng-click="adjustDate(-10, 'day')"><i class="fa fa-angle-double-down"></i></td>
+                <td ng-click="adjustDate(-10, 'month')"><i class="fa fa-angle-double-down"></i></td>
+                <td ng-click="adjustDate(-10, 'year')"><i class="fa fa-angle-double-down"></i></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <div class="btn btn-default" ng-click="cancel()">{{ config.decline }}</div>
+        <div class="btn btn-primary" ng-click="ok(dateTime)">{{ config.accept }}</div>
+    </div>
+</div>

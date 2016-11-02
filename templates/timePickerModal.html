@@ -1,0 +1,45 @@
+<div>
+    <div class="tableWrapper">
+        <table>
+            <tr class="adjust-row">
+                <td></td>
+                <td ng-click="adjustDate(12, 'hour')"><i class="fa fa-angle-double-up"></i></td>
+                <td class="small"></td>
+                <td ng-click="adjustDate(config.step*10, 'minute')"><i class="fa fa-angle-double-up"></i></td>
+                <td></td>
+            </tr>
+            <tr class="adjust-row">
+                <td></td>
+                <td ng-click="adjustDate(1, 'hour')"><i class="fa fa-angle-up"></i></td>
+                <td class="small"></td>
+                <td ng-click="adjustDate(config.step, 'minute')"><i class="fa fa-angle-up"></i></td>
+                <td></td>
+            </tr>
+            <tr class="date-time-row">
+                <td></td>
+                <td class="date-time-text">{{ dateTime | amDateFormat:"HH" }}</td>
+                <td class="small">:</td>
+                <td class="date-time-text">{{ dateTime | amDateFormat:"mm" }}</td>
+                <td></td>
+            </tr>
+            <tr class="adjust-row">
+                <td></td>
+                <td ng-click="adjustDate(-1, 'hour')"><i class="fa fa-angle-down"></i></td>
+                <td class="small"></td>
+                <td ng-click="adjustDate(-config.step, 'minute')"><i class="fa fa-angle-down"></i></td>
+                <td></td>
+            </tr>
+            <tr class="adjust-row">
+                <td></td>
+                <td ng-click="adjustDate(-12, 'hour')"><i class="fa fa-angle-double-down"></i></td>
+                <td class="small"></td>
+                <td ng-click="adjustDate(-config.step*10, 'minute')"><i class="fa fa-angle-double-down"></i></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <div class="btn btn-default" ng-click="cancel()">{{ config.decline }}</div>
+        <div class="btn btn-primary" ng-click="ok(dateTime)">{{ config.accept }}</div>
+    </div>
+</div>

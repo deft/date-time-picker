@@ -1,0 +1,72 @@
+.deft-date-time-picker {
+  .deft-date-time-picker-date, .deft-date-time-picker-time {
+    label {
+      width: 100px;
+      display: block;
+      float: left;
+    }
+
+    .deft-date-time-picker-date-picker, .deft-date-time-picker-time-picker {
+      float: left;
+      cursor: pointer;
+    }
+    &:after {
+      content: " ";
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+.deft-date-time-picker-modal {
+  .modal-dialog {
+    width: 370px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    .modal-content {
+      box-shadow: none;
+      border-radius: 0;
+    }
+  }
+  .tableWrapper {
+    padding: 20px;
+    table {
+      width: 100%;
+      td {
+        width: 22%;
+        text-align: center;
+        &.large { width: 34%; }
+        &.small { width: 0; padding: 2px 0; }
+        &.align-left { text-align: left; }
+        i { overflow: hidden; }
+        padding: 2px 8px;
+      }
+      .date-time-row td {
+        font-size: 18px;
+        padding: 0 8px;
+        &.date-time-text {
+          &:before, &:after {
+            display: block;
+            content: " ";
+            height: 2px;
+            background: #ddd;
+          }
+        }
+      }
+      .adjust-row td {
+        color: #777;
+      }
+    }
+  }
+  .btn {
+    width: 50%;
+    line-height: 40px;
+    float: left;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+  }
+}
